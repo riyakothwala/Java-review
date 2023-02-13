@@ -1,12 +1,16 @@
 package ComparatorComparable;
 
-import java.util.Arrays;
-import java.util.Collections;
-import java.util.List;
-
 class Book implements java.lang.Comparable<Book> {
     private final String name;
     private final int id;
+
+    public String getName() {
+        return name;
+    }
+
+    public int getId() {
+        return id;
+    }
 
     public Book(String name, int id) {
         this.name = name;
@@ -36,17 +40,3 @@ class Book implements java.lang.Comparable<Book> {
 }
 
 
-public class Comparator {
-    public static void main(String[] args) {
-        Book b1 = new Book("pqr", 29);
-        Book b2 = new Book("abc", 23);
-        Book b3 = new Book("xya", 12);
-
-        List<Book> list = Arrays.asList(b1, b2, b3);
-        Collections.sort(list);
-
-        for (Book b : list)
-            System.out.println(b);
-
-    }
-}
